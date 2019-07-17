@@ -13,10 +13,10 @@
 // If the value isn't in the tree return null.
 
 class Node {
-  constructor(data) {
+  constructor(data, left = null, right = null) {
     this.data = data;
-    this.left = null;
-    this.right = null;
+    this.left = left;
+    this.right = right;
   }
 
   insert(data) {
@@ -32,16 +32,17 @@ class Node {
   }
 
   contains(data) {
-    if (this.data === data) {
+
+    if (data === this.data) {
       return this;
     }
 
-    if (this.data < data && this.right) {
-      return this.right.contains(data);
-    } else if (this.data > data && this.left) {
-      return this.left.contains(data);
+    if (data > this.data && this.right) {
+      this.right.contains(data);
     }
-
+    if (data < this.data && this.left) {
+      this.left.contains(data);
+    }
     return null;
   }
 }

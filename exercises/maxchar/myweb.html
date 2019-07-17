@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="This is my website">
+    <meta name="keywords" content="web development, web design, frontend">
+    <title>Float & Align</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        #box-1 {
+            background: red;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+
+        #box-2 {
+            background: green;
+            top: 200px;
+            left: 200px;
+            position: absolute;
+        }
+
+        #box-3 {
+            background: blue;
+            top: 100px;
+            left: 50px;
+            position: absolute;
+        }
+
+        #box-4 {
+            background: yellow;
+            position: fixed;
+        }
+
+        #box-5 {
+            position: sticky;
+            top: 0;
+            background: brown;
+        }
+
+        /* .box {
+            padding: 20px;
+            width:32%;
+            display: inline-block;
+            margin-bottom: 15px;
+            background-color: whitesmoke;
+            box-sizing: border-box;
+        } */
+
+        /* .container {
+            max-width: 960px;
+            margin: 50px auto;
+        }
+
+       
+        .box p {
+            text-align: justify;
+        } */
+
+        /*
+        #primaryheading {
+            color: blue;
+        }
+
+        #welcome p {
+            font-size: 2em;
+            background-color: lightsteelblue;
+            padding: 10px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid gray;
+            margin-bottom: 10px;
+            background-color: whitesmoke;
+            text-align: justify;
+            box-sizing: border-box;
+        }
+
+        .box p {
+            color: brown;
+        } */
+        /* 
+        a {
+            color: lightgrey;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: coral;
+            padding: 5px;
+            color: brown;
+            border-radius: 8px;
+        } */
+        /* .btn {
+            background-color: #3b5998;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: #446190;
+            color: #f4f4f4;
+        } */
+
+        /* .navbar {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            background-color: #3b5998;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        .navbar li a:hover {
+            background-color: #446190;
+            color: #ddd;
+        }
+
+        .side-menu {
+            list-style: none;
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+        }
+
+        .side-menu li {
+            font-size: 18px;
+            line-height: 2.4em;
+            border-bottom: dotted 1px #ddd;
+        }
+
+        .side-menu li:last-child {
+            border: none;
+        }
+
+        .side-menu li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .side-menu li a:hover {
+            color: coral;
+        } */
+        /* 
+        li {
+            display: inline;
+        }
+
+        li a {
+            padding-right: 20px
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="welcome">
+        <h2 id="primaryheading">About paragragraph</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit placeat inventore corrupti ex modi
+            distinctio, consequatur quia illum ut est adipisci mollitia optio explicabo libero eveniet repudiandae
+            tempore fuga?</p>
+    </div>
+
+    <div>
+        <h2>more about .....</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae neque blanditiis dolorem voluptatum libero,
+            eum ipsam vero laudantium in, harum quas quasi praesentium molestiae similique, exercitationem doloremque
+            cumque consequuntur ex!</p>
+    </div> -->
+    <!-- <div class="container">
+
+        <div id="box-1" class="box">
+            <h3>This is the first box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+                vel
+                perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+                deleniti aut corrupti veniam!</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>This is the second box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+                vel
+                perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+                deleniti aut corrupti veniam!</p>
+        </div>
+        <div id="box-3" class="box">
+            <h3>This is the second box</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+                vel
+                perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+                deleniti aut corrupti veniam!</p>
+        </div>
+    </div> -->
+
+    <!-- <a class="btn" href="#">My Link</a>
+    <br>
+    <br>
+    <button class="btn">My button</button> -->
+
+    <!-- <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <ul class="side-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul> -->
+    <!-- <ul>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Business</a></li>
+    </ul>
+
+    <br>
+    <br>
+
+    <img src="./leaf.png" alt="leaf">
+
+    <br>
+    <br>
+
+    <div class="box">
+        <h3>This is the first box</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+            vel
+            perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+            deleniti aut corrupti veniam!</p>
+    </div>
+    <div class="box">
+        <h3>This is the second box</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+            vel
+            perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+            deleniti aut corrupti veniam!</p>
+    </div>
+    <div class="box">
+        <h3>This is the second box</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint quod provident vitae vero
+            vel
+            perspiciatis voluptas ratione maiores mollitia consequatur maxime sequi, minus reprehenderit officiis
+            deleniti aut corrupti veniam!</p>
+    </div> -->
+    <div id="box-1" class="box"></div>
+    <div class="container">
+        <div id="box-2" class="box"></div>
+        <div id="box-3" class="box"></div>
+
+    </div>
+    <div id="box-4" class="box"></div>
+    <div id="box-5" class="box"></div>
+</body>
+
+</html>

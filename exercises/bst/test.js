@@ -39,3 +39,15 @@ test('Contains returns null if value not found', () => {
 
   expect(node.contains(9999)).toEqual(null);
 });
+
+test('Prints all nodes with no siblings', () => {
+  const node = new Node(1);
+
+  node.insert(2);
+  node.insert(3);
+  node.insert(4);
+  node.insert(5);
+  node.insert(6);
+
+  expect(node.nosiblings()).toEqual([4, 5, 6]);
+});
